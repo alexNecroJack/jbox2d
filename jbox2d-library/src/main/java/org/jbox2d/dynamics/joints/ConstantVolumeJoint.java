@@ -255,4 +255,12 @@ public class ConstantVolumeJoint extends Joint {
   public float getReactionTorque(float inv_dt) {
     return 0;
   }
+
+  public float getTargetVolume() {
+    return targetVolume;
+  }
+
+  public void setTargetVolume(float targetVolume) {
+    this.targetVolume = targetVolume;
+  }
 }
