@@ -263,4 +263,8 @@ public class ConstantVolumeJoint extends Joint {
   public void setTargetVolume(float targetVolume) {
     this.targetVolume = targetVolume;
   }
+
+  public float[] getTargetLengths() {
+    return targetLengths;
+  }
 }
