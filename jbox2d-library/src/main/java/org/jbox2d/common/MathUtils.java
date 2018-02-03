@@ -51,7 +51,7 @@ import java.util.Random;
 /**
  * A few math methods that don't fit very well anywhere else.
  */
-public class MathUtils extends PlatformMathUtils {
+public class MathUtils extends org.jbox2d.common.PlatformMathUtils {
   public static final float PI = (float) Math.PI;
   public static final float TWOPI = (float) (Math.PI * 2);
   public static final float INV_PI = 1f / PI;
@@ -126,7 +126,7 @@ public class MathUtils extends PlatformMathUtils {
     if (Settings.FAST_ABS) {
       return x > 0 ? x : -x;
     } else {
-      return StrictMath.abs(x);
+      return Math.abs(x);
     }
   }
 
@@ -143,7 +143,7 @@ public class MathUtils extends PlatformMathUtils {
     if (Settings.FAST_FLOOR) {
       return fastFloor(x);
     } else {
-      return (int) StrictMath.floor(x);
+      return (int) Math.floor(x);
     }
   }
 
@@ -159,7 +159,7 @@ public class MathUtils extends PlatformMathUtils {
     if (Settings.FAST_CEIL) {
       return fastCeil(x);
     } else {
-      return (int) StrictMath.ceil(x);
+      return (int) Math.ceil(x);
     }
   }
 
@@ -260,7 +260,7 @@ public class MathUtils extends PlatformMathUtils {
     if (Settings.FAST_POW) {
       return fastPow(a, b);
     } else {
-      return (float) StrictMath.pow(a, b);
+      return (float) Math.pow(a, b);
     }
   }
 
