@@ -67,7 +67,7 @@ public abstract class Joint {
         return new MotorJoint(world.getPool(), (MotorJointDef) def);
       case UNKNOWN:
       default:
-        return null;
+        return def.create(world);
     }
   }
 
