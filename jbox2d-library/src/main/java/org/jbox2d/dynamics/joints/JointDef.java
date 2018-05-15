@@ -24,6 +24,7 @@
 package org.jbox2d.dynamics.joints;
 
 import org.jbox2d.dynamics.Body;
+import org.jbox2d.dynamics.World;
 
 /**
  * Joint definitions are used to construct joints.
@@ -62,4 +63,8 @@ public class JointDef {
 	 * Set this flag to true if the attached bodies should collide.
 	 */
 	public boolean collideConnected;
+
+	public Joint create(World world) {
+		return null;
+	}
 }
